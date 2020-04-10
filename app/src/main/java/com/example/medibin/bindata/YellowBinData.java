@@ -1,0 +1,137 @@
+package com.example.medibin.bindata;
+
+
+import com.example.medibin.R;
+
+public class YellowBinData {
+
+    public static String[] nameArray = {
+            "Aborted Fetus",
+            "Amputated Body Parts",
+            "Antibiotic Injection",
+            "Antibiotic",
+            "Aspirated body Fluids",
+            "Aspirated Secretion",
+            "Biopsy Specimen",
+            "Blood Bags",
+            "Blood Stained Cotton Guaze",
+            "Cap",
+            "Ccine",
+            "Chemotherapy Drugs",
+            "Cotton Guaze",
+            "Culture and Stock of Infectious Agent",
+            "Culture Tubes",
+            "Disinfectant",
+            "Disposable Shoe Cover",
+            "Expired Medicines",
+            "Face Mask",
+            "Farmalin",
+            "Hospital Disinfectant",
+            "Hospital Grown",
+            "Human Anatomical Waste",
+            "Lab Culture",
+            "Petridish with Culture",
+            "Placenta",
+            "Plaster Cast",
+            "Shoe Cover",
+            "Soiled cotton guaze",
+            "Soiled Cotton",
+            "Soiled Dressing",
+            "Soiled Mastress",
+            "Specimen",
+            "Stained Cotton and Guaze pads",
+            "Tooth",
+            "Vaccine vial",
+            "Vaccine",
+
+
+
+
+    };
+    public static String[] versionArray = {
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+
+
+    };
+
+    public static Integer[] drawableArray = {
+            R.drawable.aborted_fetus,
+            R.drawable.amputated_body_parts,
+            R.drawable.antibiotic_injection,
+            R.drawable.antibiotics,
+            R.drawable.aspirated_body_fluids,
+            R.drawable.aspirated_secretion,
+            R.drawable.biopsy_specimen,
+            R.drawable.blood_bags,
+            R.drawable.blood_stained_cotton_guaze,
+            R.drawable.cap,
+            R.drawable.ccines,
+            R.drawable.chemotherapydrugs,
+            R.drawable.cotton_guaze,
+            R.drawable.culture_and_stock_of_infectious_agent,
+            R.drawable.culture_tubes,
+            R.drawable.disinfectant,
+            R.drawable.shoe_cover,
+            R.drawable.expired_or_discarded_medicines,
+            R.drawable.face_mask,
+            R.drawable.formalin,
+            R.drawable.hospital_disinfectant,
+            R.drawable.hospital_gown,
+            R.drawable.human_anatomical_waste,
+            R.drawable.lab_culture,
+            R.drawable.petridish_with_culture,
+            R.drawable.placenta,
+            R.drawable.plaster_cast,
+            R.drawable.shoe_cover,
+            R.drawable.soiled_cotton_guaze,
+            R.drawable.soiled_cotton,
+            R.drawable.soiled_dressing,
+            R.drawable.soiled_matress,
+            R.drawable.specimen,
+            R.drawable.stained_cotton_and_guaze_pads,
+            R.drawable.tooth,
+            R.drawable.vaccine_vial,
+            R.drawable.vaccine,
+
+
+
+    };
+
+    public static Integer[] id_ = {0, 1};
+}

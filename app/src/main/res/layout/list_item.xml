@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout
+    android:background="@android:color/transparent"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<FrameLayout
+    android:background="@android:color/transparent"
+
+    android:id="@+id/rel_appintment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:background="@android:color/transparent"
+
+        android:id="@+id/view_foreground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageButton
+            android:id="@+id/thumbnail"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="fitXY"
+            android:layout_marginRight="10dp"
+            />
+
+        <LinearLayout
+            android:background="@android:color/transparent"
+
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <TextView
+                android:background="@android:color/transparent"
+
+                android:gravity="center_vertical"
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="2"
+                android:text="dsjfsdjsdjfsdjfosdjf"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>
+    <View
+
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentBottom="true"
+        android:background="#000"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+
+</RelativeLayout>

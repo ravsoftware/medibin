@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:orientation="vertical"
+    android:id="@+id/linear_Layout"
+    android:background="#F1F7F8">
+    <android.support.v7.widget.Toolbar
+        android:background="#ECF4F5"
+        android:layout_margin="20dp"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="#fff">
+
+
+    </android.support.v7.widget.Toolbar>
+    <AutoCompleteTextView
+        android:layout_marginHorizontal="20dp"
+        android:textColor="#000"
+        android:id="@+id/ac_Country"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:hint="Search with name"/>
+
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@drawable/amputated_body_parts"
+                android:layout_marginBottom="30dp"
+                android:id="@+id/image1"
+                android:scaleType="fitXY"
+                android:layout_width="150dp"
+                android:layout_height="150dp"/>
+            <ImageView
+
+                android:layout_below="@id/image1"
+                android:src="@drawable/white_icon"
+                android:id="@+id/image"
+                android:layout_width="150dp"
+                android:layout_height="200dp"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
