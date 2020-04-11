@@ -7,7 +7,7 @@
     <string name="dialog_cancel">Cancel</string>
     <string name="LOADING">Loading...</string>
     <string name="reset">Reset</string>
-    <string name="copy_right" translatable="false">Copyrights © %1$d</string>
+    <string name="copy_right" translatable="false">Copyrights © RAV Software solutions INC.  %1$d</string>
     <string name="about_page_description" translatable="false">Bio-medical waste means any waste generated during diagnosis, treatment or immunization of human beings or animals or research activities pertaining thereto or in the production or testing of biological or in health camps (WHO defn).\n\n
 Bio-medical waste or health-care waste includes all the waste generated within health-care facilities, research centres and laboratories related to medical procedures. It includes sharp waste, infectious waste, radioactive waste, chemical and pharmaceutical waste.\n\n
 Although the quantity of such waste is around 10% to 15% of total waste generated from the Health Care Facility, they are hazardous and if mixed with non-hazardous waste then the whole waste has to be treated as hazardous. Improper disposal of these waste can adversely affect the human health and environment.\n\n
@@ -17,7 +17,7 @@ Medibin gives a novel, intuitive and goal-oriented approach to increase awarenes
 
 
 <h2>Our Team</h2>
-<b>Dr.Aarthy Marimuthu(Co-founder Medibin)</b>\n
+<b>Dr.Aarthy Marimuthu(Founder Medibin)</b>\n
 Completed MBBS and pursuing M.D Community Medicine. Worked under Tamilnadu State\n government as Medical Officer in primary health centre. Interested in Public health \nadministration and Research.
 
 Ramekumaar Rethinam Asokan(Co-founder Medibin)
