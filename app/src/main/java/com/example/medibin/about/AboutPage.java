@@ -118,7 +118,7 @@ public class AboutPage {
     }
 
     /**
-     * Add a predefined Element that the opens Facebook app with a deep link to the specified user id
+     * Add a predefined Element that the opens Facebook app ///////////////////////with a deep link to the specified user id
      * If the Facebook application is not installed this will open a web page instead.
      *
      * @param id    the id of the Facebook user to display in the Facebook app
