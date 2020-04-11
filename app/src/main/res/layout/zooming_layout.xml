@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialog_constraint_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/lay"
+        android:background="@drawable/light_rectangle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:background="@drawable/vertical_divider"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp">
+
+        </View>
+
+        <LinearLayout
+            android:paddingVertical="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:paddingLeft="15dp"
+            >
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:paddingLeft="10dp" >
+
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:text="Name"
+                    android:textColor="@android:color/black"
+                    style="@style/Textnormal"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <View
+            android:background="@drawable/vertical_divider"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp">
+
+        </View>
+    </LinearLayout>
+
+
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:layout_below="@id/lay"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center"
+        android:id="@+id/dialog_three_dot3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+</RelativeLayout>

@@ -43,7 +43,7 @@
             android:layout_height="60dp">
             <TextView
                 android:background="@android:color/transparent"
-
+                style="@style/Textnormal"
                 android:gravity="center_vertical"
                 android:id="@+id/name"
                 android:layout_width="match_parent"

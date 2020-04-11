@@ -1,11 +1,14 @@
 package com.example.medibin;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -14,18 +17,17 @@ import android.widget.Toast;
 import com.example.medibin.about.AboutActivity;
 import com.example.medibin.bindata.BlueDustBinNew;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    ImageView blueBin,yellowBin,redBin,whiteBin;
+    ImageView about;
 
-    TextView out, in, operation, injection, labour, blood;
-    TextView out1, in1, operation1, injection1, labour1, blood1, about;
+   // TextView out, in, operation, injection, labour, blood;
+   // TextView out1, in1, operation1, injection1, labour1, blood1;
 
     Button quiz,learn,search;
     Preference socitreepreference;
+
+    TextView contentText;
 
     private static final int TIME_DELAY=2000;
     private static long back_pressed;
@@ -44,15 +46,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         search = (Button) findViewById(R.id.button1);
 
 
-        blueBin = (ImageView)findViewById(R.id.bluebin);
-        redBin = (ImageView)findViewById(R.id.redbin);
-        whiteBin = (ImageView)findViewById(R.id.whitebin);
-        yellowBin = (ImageView)findViewById(R.id.yellowbin);
+        contentText= (TextView)findViewById(R.id.contenttext);
+        about = (ImageView)findViewById(R.id.about);
 
-        out = (TextView)findViewById(R.id.out);
-        about = (TextView)findViewById(R.id.about);
+        String text ="<p><br>Medibin aids capacity building in medical profesionals, paramedics, Medical &amp; Paramedical students and also the waste handlers on Biomedical waste segregation.</p>";
 
-        in = (TextView)findViewById(R.id.in);
+
+        contentText.setText(Html.fromHtml(text));
+
+    /*   // in = (TextView)findViewById(R.id.in);
         operation = (TextView)findViewById(R.id.operation);
         injection = (TextView)findViewById(R.id.injection);
         labour = (TextView)findViewById(R.id.labour);
@@ -64,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         injection1 = (TextView)findViewById(R.id.injection1);
         labour1 = (TextView)findViewById(R.id.labour1);
         blood1 = (TextView)findViewById(R.id.blood1);
-
+*/
 
         about.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
 
 
-        if (socitreepreference.getBlue()!= null)
+       /* if (socitreepreference.getBlue()!= null)
         {
             if (socitreepreference.getBlueC().equalsIgnoreCase("complete")) {
                 out.setTextColor(Color.parseColor("#08AF03"));
@@ -219,11 +221,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivityForResult(intent,112);
             }
         });
+*/
 
 
 
 
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
 
     }
 
@@ -241,8 +249,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }else {
 
             /* this.doubleBackToExitPressedOnce = true;*/
-            //Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
-            displayToast();
+            Toast.makeText(MainActivity.this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+           // displayToast();
         }
         back_pressed=System.currentTimeMillis();
     }
@@ -259,7 +267,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.LENGTH_SHORT);
 
         View toastView = toast.getView();
-        toastView.setBackgroundResource(R.drawable.toast_drawable);
+        toastView.setBackgroundColor(Color.BLACK);
         TextView text = (TextView) toastView.findViewById(android.R.id.message);
         text.setTextColor(Color.WHITE);
 
@@ -275,5 +283,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         {
 
         }
+    }
+    public void closeKeyboard(){
+        InputMethodManager inputMethodManager = (InputMethodManager) getApplicationContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+        inputMethodManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
     }
 }

@@ -14,6 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp">
         <android.support.v7.widget.Toolbar
+            app:navigationIcon="@drawable/ic_chevron_left_black_24dp"
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -50,6 +51,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent">
             <TextView
+                style="@style/Textnormal"
                 android:textColor="#000"
                 android:textSize="18sp"
                 android:gravity="center"
@@ -58,6 +60,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <TextView
+                style="@style/Textnormal"
                 android:textColor="#000"
                 android:id="@+id/items"
                 android:textSize="18sp"
@@ -77,6 +80,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent">
             <TextView
+                style="@style/Textnormal"
                 android:textColor="#000"
                 android:textSize="18sp"
                 android:gravity="center"
@@ -85,6 +89,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <TextView
+                style="@style/Textnormal"
                 android:textColor="#000"
                 android:id="@+id/display"
                 android:textSize="18sp"
@@ -101,6 +106,7 @@
         android:layout_width="0dp"
         android:layout_height="match_parent">
         <TextView
+            style="@style/Textnormal"
             android:textColor="#000"
             android:textSize="18sp"
             android:gravity="center"
@@ -109,6 +115,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <TextView
+            style="@style/Textnormal"
             android:textColor="#000"
             android:id="@+id/score"
             android:textSize="18sp"
@@ -148,6 +155,7 @@
 
 
     <TextView
+        style="@style/Textnormal"
         android:textStyle="bold"
         android:layout_marginTop="10dp"
         android:id="@+id/name"
@@ -159,14 +167,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <Button
+        style="@style/Textnormal"
+        android:background="#A8000000"
         android:id="@+id/next"
         android:textStyle="bold"
         android:textColor="#fff"
         android:text="Next"
+        android:textSize="22sp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
         android:layout_alignParentRight="true"
-        android:gravity="right"
         android:layout_above="@id/bottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
@@ -340,8 +350,9 @@
         app:ctvQuarterMarkSize="20dp"
         app:ctvQuarterNumberTextSize="1sp"
         app:ctvTimeMode="manual"
-        app:ctvTimeNumberColor="#E761FF"
-        app:ctvTimeNumbersTextSize="16sp"
+        app:ctvTimeNumberColor="#C108E2"
+
+        app:ctvTimeNumbersTextSize="24sp"
         />
 
     <com.example.medibin.bindata.DonutProgress

@@ -21,39 +21,40 @@ public class AboutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         simulateDayNight(/* DAY */ 0);
         Element adsElement = new Element();
-        adsElement.setTitle("Advertise with us");
+       // adsElement.setTitle("Advertise with us");
 
-        String dfdjk= "<p>Bio-medical waste means any waste generated during diagnosis, treatment or immunization of human beings or animals or research activities pertaining thereto or in the production or testing of biological or in health camps (WHO defn). Bio-medical waste or health-care waste includes all the waste generated within health-care facilities, research centres and laboratories related to medical procedures. It includes sharp waste, infectious waste, radioactive waste, chemical and pharmaceutical waste. Although the quantity of such waste is around 10% to 15% of total waste generated from the Health Care Facility, they are hazardous and if mixed with non-hazardous waste then the whole waste has to be treated as hazardous. Improper disposal of these waste can adversely affect the human health and environment. Proper training to the healthcare workers and others involved in handling the biomedical waste is therefore essential for sound management of healthcare waste to ensure occupational safety. Medibin gives a novel, intuitive and goal-oriented approach to increase awareness and impart knowledge about biomedical waste segregation in medical professional, paramedics, students and also the waste handlers.<br></p>" +
+        String dfdjk= "<p style=\"color:#00008b;\"><i>Bio-medical waste means any waste generated during diagnosis, treatment or immunization of human beings or animals or research activities pertaining thereto or in the production or testing of biological or in health camps (WHO defn)</i></b>.</p> <p>*    Bio-medical waste or health-care waste includes all the waste generated within health-care facilities, research centers and laboratories related to medical procedures. It includes sharp waste, infectious waste, radioactive waste, chemical waste and pharmaceutical waste.</p><p>*    Although the quantity of such waste is around 10% to 15% of total waste generated from the Health Care Facility, they are hazardous and if mixed with non-hazardous waste then the whole waste has to be treated as hazardous.</P><p>*    Improper disposal of these waste can adversely affect the human health and environment. Proper training to the healthcare workers and others involved in handling the biomedical waste is therefore essential for sound management of healthcare waste to ensure occupational safety.</P><p>*    Biomedical waste management is majority done if the waste is properly segregated at the point of generation itself. This biomedical waste segregation is the core concept of Medibin.</p><p>*    Medibin gives a novel, intuitive and goal-oriented approach to increase awareness and impart knowledge about biomedical waste segregation in healthcare workers, medical and paramedical students and also the waste handlers. This app helps you to learn, inquire and to evaluate yourself.<br></p>" +
 
-                "<p><b>Dr.Aarthy Marimuthu(Co-founder Medibin)</b>" +
-                "<br>Completed MBBS and pursuing M.D Community Medicine. <br>Worked under Tamilnadu State<br> government as Medical Officer in primary health centre.<br> Interested in Public health administration and Research.</p>" +
+                "<p><b>Dr.Aarthy Marimuthu(Founder Medibin)</b>" +
+                "<br>Completed MBBS and pursuing M.D Community Medicine. <br>Worked under Tamil Nadu State government as Medical Officer in Primary Health Centre.<br> Interested in Public health administration and Research.</p>" +
 
-                "<br><b>Ramkumaar Rethinam Asokan(Co-founder Medibin)</b>" +
-                "<br>Completed B Tech in computer science. With 11+ experience in Software development. <br>Director, RAV software solutions INC,Toronto, Canada." +
+                "<br><b>Ramkumaar Rethinam Asokan(Co Founder Medibin)</b>" +
+                "<br>Completed B.Tech in Computer Science. With 11+ experience in Software development. <br>Director, RAV software solutions INC,Toronto, Canada." +
                 "<br>Interested in developing innovative solutions." +
 
                 "<p><h2>Developers</h2>" +
                 "<b>Ganeshpandi Subbaiah</b>" +
                 "<br>Completed BE in Electronics and Communication Engineering"+
                 "<br>Working as Android application developer at Cybzero.com"+
-                "<br>Interested in creating inovative Android application  ."+
+                "<br>Interested in creating innovative Android application  ."+
                 "<br><br><b>Aravind Dharmaraj</b>" +
-                "<br>Completed BTech information technology. Working as Software team lead at Cybzero.com,  Weekend open source programmer. Interested in helping entrepreneurs with tools and ideas to build and grow their companies." +
-                "<br>Quality assurance and Analyst:" +
+                "<br>Completed B.Tech Information Technology.<br> Working as Software team lead at Cybzero.com,  Weekend open source programmer. <br>Interested in helping entrepreneurs with tools and ideas to build and grow their companies." +
+                "<br>Quality assurance and Analyst" +
                 "<br><br><b>Ramnath T K</b>" +
-                "<br>Completed BTech in Computer science engineering." +
-                "<br>Working as Senior Test Lead in a Global MNC IT company." +
-                "<br>Having 10 years of experience in Mobile Functional Testing. Interested in playing QA role for mobile app solutions and thereby ensuring  quality product deliveries.<p>";
+                "<br>Completed B.Tech in Computer Science Engineering. " +
+                "<br>Working as Senior Test Lead in a Global MNC IT company. " +
+                "<br>Having 10 years of experience in Mobile Functional Testing.<br>Interested in playing QA role for mobile app solutions and thereby ensuring quality product deliveries.<p>";
         String next = "<font color='#860F0F'>SIGN IN</font>";
        // txt_signin.setText(Html.fromHtml("hdifuhdishif" + "  "+next));
 
         View aboutPage = new AboutPage(this)
                 .isRTL(false)
-                .setImage(R.mipmap.ic_launcher)
+                .setImage(R.drawable.about_icon)
                // .addItem(new Element().setTitle("Version 6.2"))
                 .setDescription(Html.fromHtml(dfdjk))
                 .addItem(adsElement)
-                .addGroup("Connect with us")
+
+               // .addGroup("Connect with us")
                 .addEmail("medibinrav@gmail.com")
                // .addWebsite("http://medyo.github.io/")
                 //.addFacebook("the.medy")

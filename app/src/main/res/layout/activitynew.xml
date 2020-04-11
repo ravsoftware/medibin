@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:background="@drawable/gradientbackground"
+
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/about"
+
+        android:src="@drawable/about_1"
+        android:layout_margin="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        />
+    <RelativeLayout
+        android:background="@drawable/image_yellow"
+        android:layout_marginTop="125dp"
+        android:layout_marginHorizontal="40dp"
+
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+        <LinearLayout
+
+            android:id="@+id/forlogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_marginVertical="10dp"
+                android:id="@+id/image"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@mipmap/ic_launcher_round"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_below="@id/forlogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/contenttext"
+                    style="@style/RobotoTextViewStyle"
+                    android:textColor="#000"
+                    android:layout_marginHorizontal="20dp"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif"
+                    android:text=""
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btom"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            style="@style/Textnormal"
+            android:layout_marginTop="20dp"
+            android:id="@+id/button3"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/newdrop"
+            android:text="LEARN"
+            android:textColor="#000"/>
+
+        <Button
+            android:layout_marginTop="20dp"
+            style="@style/Textnormal"
+            android:textSize="20sp"
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/newdrop_2"
+            android:text="TAKE QUIZ"
+            android:textColor="#000"/>
+        <Button
+            style="@style/Textnormal"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/newdrop_1"
+            android:text="SEARCH"
+            android:textColor="#000" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

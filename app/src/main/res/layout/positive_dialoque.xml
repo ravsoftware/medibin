@@ -10,7 +10,7 @@
 
     <ImageView
         android:tint="@android:color/transparent"
-
+        android:visibility="gone"
         android:id="@+id/imageView"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -27,6 +27,8 @@
 
 
     <TextView
+        android:visibility="gone"
+        style="@style/Textnormal"
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -44,6 +46,9 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
+        android:gravity="center"
+        android:visibility="gone"
+        style="@style/Textnormal"
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -60,6 +65,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
     <TextView
+        android:visibility="gone"
+        style="@style/Textnormal"
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -76,7 +83,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
     <TextView
-        android:visibility="visible"
+        android:visibility="gone"
+        style="@style/Textnormal"
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -94,7 +102,8 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
-        android:visibility="visible"
+        style="@style/Textnormal"
+        android:visibility="gone"
         android:id="@+id/time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -111,6 +120,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
     <Button
+        android:visibility="gone"
+        style="@style/Textnormal"
         android:textStyle="bold"
         android:id="@+id/btnDialog"
         android:layout_width="match_parent"
@@ -121,15 +132,34 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/round_button"
-        android:text="Continue"
-        android:textColor="@android:color/black"
+        android:background="@drawable/round_button_blue"
+        android:text="Retry"
+        android:textColor="@android:color/white"
         android:textSize="18sp"
-        app:backgroundTint="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/time" />
+    <Button
+        style="@style/Textnormal"
+        android:textStyle="bold"
+        android:id="@+id/btnDialog1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/round_button_blue"
+        android:text="Go back to Home"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDialog" />
 
 </android.support.constraint.ConstraintLayout>
 

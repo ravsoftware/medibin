@@ -102,9 +102,11 @@ public class BlueDustBin extends AppCompatActivity implements View.OnLongClickLi
         bundle = getIntent().getExtras();
         //getting the toolbar
         toolbar = (Toolbar) findViewById(R.id.toolbar);
+
         parentLinearLayout = (RelativeLayout) findViewById(R.id.toplayout);
 
         circleTimeView = (CircleTimeView) findViewById(R.id.circle_timer_view);
+
 
         total = (TextView) findViewById(R.id.items);
         display = (TextView) findViewById(R.id.display);
@@ -120,7 +122,7 @@ public class BlueDustBin extends AppCompatActivity implements View.OnLongClickLi
         //setting the title
 
 
-        circleTimeView.setCurrentTime(480);
+        circleTimeView.setCurrentTime(600);
 
 
 
@@ -205,76 +207,9 @@ public class BlueDustBin extends AppCompatActivity implements View.OnLongClickLi
         if (bundle != null)
         {
 
+            callSatrtEnd();
 
 
-            if (socitreepreference.getStart() == null)
-            {
-                socitreepreference.putStart("0");
-                socitreepreference.putEnd("29");
-                data = new ArrayList<DataModel>();
-                for (int i = 0; i < 30; i++) {
-                    data.add(new DataModel(
-                            InfoData.nameArray[i],
-                            InfoData.versionArray[i],
-                            InfoData.id_[i],
-                            InfoData.drawableArray[i]
-                    ));
-                }
-            }
-            else
-            {
-
-                int star = Integer.parseInt(socitreepreference.getStart());
-                int end = Integer.parseInt(socitreepreference.getEnd());
-
-
-
-
-                    data = new ArrayList<DataModel>();
-
-
-                    for (int i = 0; i < 30; i++) {
-
-                        end = end +1;
-
-                        if (end >100)
-                        {
-                            end =0;
-                        }
-
-                        if (i == 0) {
-
-                            socitreepreference.putStart(String.valueOf(end));
-                        }
-
-                        if (i == 29) {
-
-                            socitreepreference.putEnd(String.valueOf(end));
-                        }
-
-                        if (end >= 87 && end < 101)
-                        {
-
-                            data.add(new DataModel(
-                                    InfoData.nameArray[end],
-                                    InfoData.versionArray[end],
-                                    end,
-                                    InfoData.drawableArray[end]
-                            ));
-                        }
-                        else if (end < 88){
-                            data.add(new DataModel(
-                                    InfoData.nameArray[end],
-                                    InfoData.versionArray[end],
-                                    end,
-                                    InfoData.drawableArray[end]
-                            ));
-                        }
-
-
-                    }
-
-            }
 
             title = bundle.getString("key");
            // toolbar.setTitle(bundle.getString("title"));
@@ -287,6 +222,11 @@ public class BlueDustBin extends AppCompatActivity implements View.OnLongClickLi
         items = data.size();
         //displayedItems = data.size();
         total.setText(items.toString());
+
+        if (displayedItems == items)
+        {
+            nextBtn.setVisibility(View.GONE);
+        }
         display.setText(displayedItems.toString());
         score.setText(totalScore.toString());
         removedItems = new ArrayList<Integer>();
@@ -355,47 +295,164 @@ public class BlueDustBin extends AppCompatActivity implements View.OnLongClickLi
 
         }
 
+    private void callSatrtEnd() {
+
+
+        if (socitreepreference.getStart() == null)
+        {
+            socitreepreference.putStart("0");
+            socitreepreference.putEnd("29");
+            data = new ArrayList<DataModel>();
+            for (int i = 0; i < 30; i++) {
+                data.add(new DataModel(
+                        InfoData.nameArray[i],
+                        InfoData.versionArray[i],
+                        InfoData.id_[i],
+                        InfoData.drawableArray[i]
+                ));
+            }
+        }
+        else
+        {
+
+            int star = Integer.parseInt(socitreepreference.getStart());
+            int end = Integer.parseInt(socitreepreference.getEnd());
+
+
+
+
+            data = new ArrayList<DataModel>();
+
+
+            for (int i = 0; i < 30; i++) {
+
+                end = end +1;
+
+                if (end >100)
+                {
+                    end =0;
+                }
+
+                if (i == 0) {
+
+                    socitreepreference.putStart(String.valueOf(end));
+                }
+
+                if (i == 29) {
+
+                    socitreepreference.putEnd(String.valueOf(end));
+                }
+
+                if (end >= 87 && end < 101)
+                {
+
+                    data.add(new DataModel(
+                            InfoData.nameArray[end],
+                            InfoData.versionArray[end],
+                            end,
+                            InfoData.drawableArray[end]
+                    ));
+                }
+                else if (end < 88){
+                    data.add(new DataModel(
+                            InfoData.nameArray[end],
+                            InfoData.versionArray[end],
+                            end,
+                            InfoData.drawableArray[end]
+                    ));
+                }
+
+
+            }
+
+        }
+    }
+
     private String getDurationString(int seconds) {
 
-        int hours = seconds / 3600;
+       // int hours = seconds / 3600;
         int minutes = (seconds % 3600) / 60;
         seconds = seconds % 60;
+        String totalString ="";
+        String totalString1 ="";
 
-        return twoDigitString(minutes) + " : " + twoDigitString(seconds);
+        if (!twoDigitString(minutes).isEmpty()) {
+            totalString =twoDigitString(minutes)+" Min ";
+        }
+
+        if (!twoDigitString(seconds).isEmpty())
+        {
+            totalString1 = twoDigitString(seconds)+" Sec ";
+        }
+
+        return totalString+totalString1;
     }
 
     private String twoDigitString(int number) {
 
         if (number == 0) {
-            return "00";
+            return "";
         }
 
         if (number / 10 == 0) {
-            return "0" + number;
+            return String.valueOf(number);
         }
 
         return String.valueOf(number);
     }
     private void showAlertDialog(int layout){
 
-        circleTimeView.stopTimer();
+
+        if (circleTimeView.getCurrentTimeInSeconds()> 2 )
+        {
+            circleTimeView.stopTimer();
+        }
         dialogBuilder = new AlertDialog.Builder(BlueDustBin.this);
         View layoutView = getLayoutInflater().inflate(layout, null);
-        Button dialogButton = layoutView.findViewById(R.id.btnDialog);
-
-
+       // Button dialogButton = layoutView.findViewById(R.id.btnDialog);
+        Button dialogButton1 = layoutView.findViewById(R.id.btnDialog1);
+        ImageView img = layoutView.findViewById(R.id.imageView);
+        TextView compl = layoutView.findViewById(R.id.textView);
         TextView right = layoutView.findViewById(R.id.textView2);
         TextView wrong = layoutView.findViewById(R.id.textView3);
-        TextView total = layoutView.findViewById(R.id.textView4);
+        TextView total1 = layoutView.findViewById(R.id.textView4);
         TextView time = layoutView.findViewById(R.id.time);
 
-        total.setText("Total Score : "+totalScore+"/"+items);
-        right.setText("Right Answer : "+totalScore);
-        wrong.setText("Wrong Answer : "+(items - totalScore));
+        System.out.println(" 11111111111111111111  display   "+items);
+        System.out.println("11111111111111111111111   display   "+displayedItems);
+        if (displayedItems-1 == items && nextQuestian)
+        {
+            double amount = Double.parseDouble(totalScore.toString());
+            double res = (amount / items) * 100;
 
-        long tim = circleTimeView.getCurrentTimeInSeconds();
-        long as = 480-tim;
-        time.setText("Time Taken : "+(getDurationString(Integer.parseInt(String.valueOf(as)))));
+
+            Toast.makeText(getApplicationContext(), "" + String.format("%.1f", res), Toast.LENGTH_SHORT).show();
+            compl.setVisibility(View.VISIBLE);
+            img.setVisibility(View.VISIBLE);
+            wrong.setVisibility(View.VISIBLE);
+            right.setVisibility(View.VISIBLE);
+            time.setVisibility(View.VISIBLE);
+            right.setText(totalScore+" of "+items +" questians answered correctly");
+            // right.setText("Right Answer : "+totalScore);
+            wrong.setText("Overall score : "+String.format("%.1f", res)+"%");
+
+            long tim = circleTimeView.getCurrentTimeInSeconds();
+            long as = 600-tim;
+
+            String[] data = getDurationString(Integer.parseInt(String.valueOf(as))).split(":");
+
+            if (getDurationString(Integer.parseInt(String.valueOf(as))).substring(1,2).equalsIgnoreCase("00"))
+            {
+                time.setText("Your time : "+(getDurationString(Integer.parseInt(String.valueOf(as)))));
+            }
+            else {
+                time.setText("Your time : "+(getDurationString(Integer.parseInt(String.valueOf(as)))));
+            }
+        }
+       else {
+            right.setVisibility(View.VISIBLE);
+            right.setText("\n\nSession Expired \n\n");
+        }
 
        // circleTimeView.getTimeFormat();
 
@@ -403,13 +460,41 @@ public class BlueDustBin extends AppCompatActivity implements View.OnLongClickLi
         dialogBuilder.setView(layoutView);
         alertDialog = dialogBuilder.create();
         alertDialog.show();
-        dialogButton.setOnClickListener(new View.OnClickListener() {
+      /*  dialogButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 alertDialog.dismiss();
 
-                    socitreepreference.putBlue(totalScore+"/"+items );
-                    socitreepreference.putBlueC("complete");
+                    callSatrtEnd();
+                    if (parentLinearLayout.getChildCount()>0)
+                    {
+                        parentLinearLayout.removeAllViews();
+                    }
+                    callClearTick();
+                    nextBtn.setVisibility(View.VISIBLE);
+                    displayedItems=1;
+                    display.setText(displayedItems.toString());
+                    totalScore=0;
+                total.setText("0");
+                onAddField(data);
+                circleTimeView.setCurrentTime(600);
+                    circleTimeView.startTimer();
+                item1.setOnClickListener(this);
+                item2.setOnClickListener(this);
+                item3.setOnClickListener(this);
+                item4.setOnClickListener(this);
+                removeView.setOnLongClickListener(this);
+                removeView.setOnDragListener(this);
+            }
+        });*/
+
+        dialogButton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                alertDialog.dismiss();
+
+                socitreepreference.putBlue(totalScore+"/"+items );
+                socitreepreference.putBlueC("complete");
 
 
                 finish();
@@ -915,13 +1000,17 @@ public class BlueDustBin extends AppCompatActivity implements View.OnLongClickLi
 
                     parentLinearLayout.removeViewAt(parentLinearLayout.getChildCount() - 1);
 
-
+                    if (displayedItems == items)
+                    {
+                        nextBtn.setVisibility(View.GONE);
+                    }
                     display.setText(displayedItems.toString());
                     score.setText(totalScore.toString());
 
                     if (parentLinearLayout.getChildCount() > 0) {
                         name.setText(data.get(countItems - 1).getName());
                         removeView = (ImageView) findViewById(parentLinearLayout.getChildCount() - 1);
+
 
                         removeView.setOnLongClickListener(this);
                         removeView.setOnDragListener(this);
@@ -946,6 +1035,7 @@ public class BlueDustBin extends AppCompatActivity implements View.OnLongClickLi
         }
         if (v == item1)
         {
+            nextQuestian = true;
             displayedItems = displayedItems + 1;
             item1.setOnClickListener(null);
             item2.setOnClickListener(null);
@@ -955,7 +1045,7 @@ public class BlueDustBin extends AppCompatActivity implements View.OnLongClickLi
             removeView.setOnLongClickListener(null);
 
 
-            nextQuestian = true;
+
 
             if (data.get(countItems-1).getVersion().equalsIgnoreCase("1")) {
                 totalScore = totalScore + 1;
@@ -980,6 +1070,7 @@ public class BlueDustBin extends AppCompatActivity implements View.OnLongClickLi
         }
         else if (v == item2)
         {
+            nextQuestian = true;
             displayedItems = displayedItems + 1;
 
             item1.setOnClickListener(null);
@@ -989,7 +1080,7 @@ public class BlueDustBin extends AppCompatActivity implements View.OnLongClickLi
             removeView.setOnDragListener(null);
             removeView.setOnLongClickListener(null);
 
-            nextQuestian = true;
+
             if (data.get(countItems-1).getVersion().equalsIgnoreCase("2")) {
                 totalScore = totalScore + 1;
                 score.setText(totalScore.toString());
@@ -1010,6 +1101,7 @@ public class BlueDustBin extends AppCompatActivity implements View.OnLongClickLi
         }
         else if (v == item3)
         {
+            nextQuestian = true;
             displayedItems = displayedItems + 1;
 
             item1.setOnClickListener(null);
@@ -1019,7 +1111,7 @@ public class BlueDustBin extends AppCompatActivity implements View.OnLongClickLi
             removeView.setOnDragListener(null);
             removeView.setOnLongClickListener(null);
 
-            nextQuestian = true;
+
             if (data.get(countItems-1).getVersion().equalsIgnoreCase("3")) {
                 totalScore = totalScore + 1;
                 score.setText(totalScore.toString());
@@ -1040,6 +1132,7 @@ public class BlueDustBin extends AppCompatActivity implements View.OnLongClickLi
         }
         else if (v == item4)
         {
+            nextQuestian = true;
             displayedItems = displayedItems + 1;
 
             item1.setOnClickListener(null);
@@ -1050,7 +1143,7 @@ public class BlueDustBin extends AppCompatActivity implements View.OnLongClickLi
             removeView.setOnLongClickListener(null);
 
 
-            nextQuestian = true;
+
             if (data.get(countItems-1).getVersion().equalsIgnoreCase("4")) {
                 totalScore = totalScore + 1;
 

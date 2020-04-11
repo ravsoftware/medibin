@@ -138,6 +138,13 @@ public class InfoActivity extends AppCompatActivity {
             });
 
         }
+
+    @Override
+    protected void onPause() {
+        closeKeyboard();
+        super.onPause();
+    }
+
     public void closeKeyboard(){
         InputMethodManager inputMethodManager = (InputMethodManager) getApplicationContext().getSystemService(Context.INPUT_METHOD_SERVICE);
         inputMethodManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
@@ -145,5 +152,11 @@ public class InfoActivity extends AppCompatActivity {
     public void showKeyboard(){
         InputMethodManager inputMethodManager = (InputMethodManager) getApplicationContext().getSystemService(Context.INPUT_METHOD_SERVICE);
         inputMethodManager.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
+    }
+
+    @Override
+    public void onBackPressed() {
+        closeKeyboard();
+        super.onBackPressed();
     }
 }

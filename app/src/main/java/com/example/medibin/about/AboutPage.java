@@ -504,7 +504,7 @@ public class AboutPage {
             description.setText(mDescription);
         }
 
-        description.setGravity(Gravity.CENTER);
+        description.setGravity(Gravity.START);
 
         if (mCustomFont != null) {
             description.setTypeface(mCustomFont);
