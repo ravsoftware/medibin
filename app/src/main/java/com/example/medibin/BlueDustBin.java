@@ -102,6 +102,7 @@ public class BlueDustBin extends AppCompatActivity implements View.OnLongClickLi
         bundle = getIntent().getExtras();
         //getting the toolbar
         toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("");
 
         parentLinearLayout = (RelativeLayout) findViewById(R.id.toplayout);
 
@@ -126,8 +127,8 @@ public class BlueDustBin extends AppCompatActivity implements View.OnLongClickLi
 
 
 
-        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
-
+        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
+        setSupportActionBar(toolbar);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -34,13 +34,13 @@ public class AboutActivity extends AppCompatActivity {
 
                 "<p><h2>Developers</h2>" +
                 "<b>Ganeshpandi Subbaiah</b>" +
-                "<br>Completed BE in Electronics and Communication Engineering"+
+                "<br>Completed B.E. in Electronics and Communication Engineering"+
                 "<br>Working as Android application developer at Cybzero.com"+
                 "<br>Interested in creating innovative Android application  ."+
                 "<br><br><b>Aravind Dharmaraj</b>" +
-                "<br>Completed B.Tech Information Technology.<br> Working as Software team lead at Cybzero.com,  Weekend open source programmer. <br>Interested in helping entrepreneurs with tools and ideas to build and grow their companies." +
+                "<br>Completed B.Tech in Information Technology.<br> Working as Software team lead at Cybzero.com,  Weekend open source programmer. <br>Interested in helping entrepreneurs with tools and ideas to build and grow their companies." +
                 "<br>Quality assurance and Analyst" +
-                "<br><br><b>Ramnath T K</b>" +
+                "<br><br><b>Ramnath Thirumalai Kalaichelvan</b>" +
                 "<br>Completed B.Tech in Computer Science Engineering. " +
                 "<br>Working as Senior Test Lead in a Global MNC IT company. " +
                 "<br>Having 10 years of experience in Mobile Functional Testing.<br>Interested in playing QA role for mobile app solutions and thereby ensuring quality product deliveries.<p>";
@@ -49,7 +49,7 @@ public class AboutActivity extends AppCompatActivity {
 
         View aboutPage = new AboutPage(this)
                 .isRTL(false)
-                .setImage(R.drawable.about_icon)
+                //.setImage(R.drawable.about_icon)
                // .addItem(new Element().setTitle("Version 6.2"))
                 .setDescription(Html.fromHtml(dfdjk))
                 .addItem(adsElement)
@@ -77,7 +77,7 @@ public class AboutActivity extends AppCompatActivity {
         copyRightsElement.setIconDrawable(R.drawable.about_icon_copy_right);
         copyRightsElement.setIconTint(R.color.about_item_icon_color);
         copyRightsElement.setIconNightTint(android.R.color.white);
-        copyRightsElement.setGravity(Gravity.CENTER);
+        copyRightsElement.setGravity(Gravity.CENTER_VERTICAL);
         copyRightsElement.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -448,11 +448,11 @@
 
         <TextView
             android:id="@+id/contenttext"
-            style="@style/RobotoTextViewStyle"
+            style="@style/Textnormal"
             android:textColor="#000"
             android:layout_marginHorizontal="10dp"
             android:gravity="center"
-            android:textSize="18sp"
+            android:textSize="19sp"
             android:fontFamily="sans-serif"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>

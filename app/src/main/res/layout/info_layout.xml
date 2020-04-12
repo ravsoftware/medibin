@@ -25,7 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
-        android:hint="Search with name"/>
+        android:hint="Enter item to know bin"/>
 
     <RelativeLayout
         android:gravity="center"

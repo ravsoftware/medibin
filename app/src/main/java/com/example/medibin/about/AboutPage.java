@@ -597,7 +597,7 @@ public class AboutPage {
 
         if (mIsRTL) {
 
-            final int gravity = element.getGravity() != null ? element.getGravity() : Gravity.END;
+            final int gravity = element.getGravity() != null ? element.getGravity() : Gravity.START;
 
             wrapper.setGravity(gravity | Gravity.CENTER_VERTICAL);
             //noinspection ResourceType
