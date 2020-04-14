@@ -2,14 +2,13 @@ package com.example.medibin.about;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.app.AppCompatDelegate;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import android.text.Html;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.medibin.MainActivity;
 import com.example.medibin.R;
 
 import java.util.Calendar;
@@ -23,7 +22,12 @@ public class AboutActivity extends AppCompatActivity {
         Element adsElement = new Element();
        // adsElement.setTitle("Advertise with us");
 
-        String dfdjk= "<p style=\"color:#00008b;\"><i>Bio-medical waste means any waste generated during diagnosis, treatment or immunization of human beings or animals or research activities pertaining thereto or in the production or testing of biological or in health camps (WHO defn)</i></b>.</p> <p>*    Bio-medical waste or health-care waste includes all the waste generated within health-care facilities, research centers and laboratories related to medical procedures. It includes sharp waste, infectious waste, radioactive waste, chemical waste and pharmaceutical waste.</p><p>*    Although the quantity of such waste is around 10% to 15% of total waste generated from the Health Care Facility, they are hazardous and if mixed with non-hazardous waste then the whole waste has to be treated as hazardous.</P><p>*    Improper disposal of these waste can adversely affect the human health and environment. Proper training to the healthcare workers and others involved in handling the biomedical waste is therefore essential for sound management of healthcare waste to ensure occupational safety.</P><p>*    Biomedical waste management is majority done if the waste is properly segregated at the point of generation itself. This biomedical waste segregation is the core concept of Medibin.</p><p>*    Medibin gives a novel, intuitive and goal-oriented approach to increase awareness and impart knowledge about biomedical waste segregation in healthcare workers, medical and paramedical students and also the waste handlers. This app helps you to learn, inquire and to evaluate yourself.<br></p>" +
+        String dfdjk= "<p style=\"color:#00008b;\"><i>Bio-medical waste as defined by WHO is any waste generated during diagnosis, treatment or immunization of human beings or animals or research activities pertaining thereto or in the production or testing of biological or in health camps.</i></b></p> " +
+                "<p>*    Bio-medical waste or health-care waste includes all the waste generated within health-care facilities, research centers and laboratories related to medical procedures. It includes sharp waste, infectious waste, radioactive waste, chemical and pharmaceutical waste.</p>" +
+                "<p>*    Although the quantity of such waste is around 10% to 15% of total waste generated from the Health Care Facility, they are hazardous and if mixed with non-hazardous waste the entire waste will need to be treated as hazardous.</P>" +
+                "<p>*    Improper disposal of these waste can adversely affect the human health and environment. Proper training to the healthcare workers and others involved in handling biomedical waste is therefore essential for sound management of healthcare waste to ensure occupational safety.</P>" +
+                "<p>*    Biomedical waste management is majority done if the waste is properly segregated at the point of generation itself. The core of Medibin is to manage proper segregation of biomedical waste right from the point of generation itself.</p>" +
+                "<p>*    Medibin gives a novel, intuitive and goal-oriented approach to increase awareness and impart knowledge about biomedical waste segregation in healthcare workers, medical and paramedical students and also the waste handlers. This app helps you to learn, inquire and to evaluate yourself.<br></p>" +
 
                 "<p><b>Dr.Aarthy Marimuthu(Founder Medibin)</b>" +
                 "<br>Completed MBBS and pursuing M.D Community Medicine. <br>Worked under Tamil Nadu State government as Medical Officer in Primary Health Centre.<br> Interested in Public health administration and Research.</p>" +
@@ -35,14 +39,12 @@ public class AboutActivity extends AppCompatActivity {
                 "<p><h2>Developers</h2>" +
                 "<b>Ganeshpandi Subbaiah</b>" +
                 "<br>Completed B.E. in Electronics and Communication Engineering"+
-                "<br>Working as Android application developer at Cybzero.com"+
                 "<br>Interested in creating innovative Android application  ."+
                 "<br><br><b>Aravind Dharmaraj</b>" +
-                "<br>Completed B.Tech in Information Technology.<br> Working as Software team lead at Cybzero.com,  Weekend open source programmer. <br>Interested in helping entrepreneurs with tools and ideas to build and grow their companies." +
+                "<br>Completed B.Tech in Information Technology. <br>Interested in helping entrepreneurs with tools and ideas to build and grow their companies." +
                 "<br>Quality assurance and Analyst" +
                 "<br><br><b>Ramnath Thirumalai Kalaichelvan</b>" +
                 "<br>Completed B.Tech in Computer Science Engineering. " +
-                "<br>Working as Senior Test Lead in a Global MNC IT company. " +
                 "<br>Having 10 years of experience in Mobile Functional Testing.<br>Interested in playing QA role for mobile app solutions and thereby ensuring quality product deliveries.<p>";
         String next = "<font color='#860F0F'>SIGN IN</font>";
        // txt_signin.setText(Html.fromHtml("hdifuhdishif" + "  "+next));

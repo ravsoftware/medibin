@@ -3,33 +3,24 @@ package com.example.medibin.bindata;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
-import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
-import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.medibin.DataModel;
 import com.example.medibin.R;
 import com.github.chrisbanes.photoview.PhotoView;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
 import com.vatsal.imagezoomer.ZoomAnimation;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 
 public class LearnAdapter extends RecyclerView.Adapter<LearnAdapter.MyViewHolder> {

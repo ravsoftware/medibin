@@ -1,17 +1,12 @@
 package com.example.medibin.about;
 
 import android.content.Intent;
-import android.support.annotation.ColorRes;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatDelegate;
+import androidx.annotation.ColorRes;
+import androidx.annotation.DrawableRes;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatDelegate;
 import android.view.View;
 
-/**
- * Element class represents an about item in the about page.
- * Use {@link AboutPage#addItem(mehdi.sakout.aboutpage.Element)} to add your
- * custom items to the AboutPage. This class can be constructed in a builder pattern type fashion.
- */
 public class Element {
 
     private String title;
@@ -187,7 +182,6 @@ public class Element {
      * Set the intent to pass to the
      * {@link android.content.Context#startActivity(android.content.Intent)} method when this item
      * is clicked. This method has lower priority than
-     * {@link mehdi.sakout.aboutpage.Element#setOnClickListener(android.view.View.OnClickListener)}
      * when both are used.
      *
      * @param intent the intent to be used

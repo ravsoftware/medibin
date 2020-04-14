@@ -13,7 +13,7 @@
         android:background="#775BC7FC"
         android:layout_width="match_parent"
         android:layout_height="100dp">
-        <android.support.v7.widget.Toolbar
+        <androidx.appcompat.widget.Toolbar
             app:navigationIcon="@drawable/ic_chevron_left_black_24dp"
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -21,11 +21,11 @@
             app:titleTextColor="#fff">
 
 
-        </android.support.v7.widget.Toolbar>
+        </androidx.appcompat.widget.Toolbar>
     </RelativeLayout>
 
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:visibility="gone"
         android:layout_above="@id/bottom"
         android:id="@+id/my_recycler_view"

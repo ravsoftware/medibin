@@ -18,7 +18,7 @@ android:background="@drawable/light_rectangle">
     android:layout_marginBottom="20dp"
     android:layout_marginTop="20dp"
 
-    android:text="Drag/Choose right Bin to dispose\n\nYou have 10 Min to complete 30 questians"
+    android:text="Drag/Choose right bin to dispose\n\nYou have 10 Min to complete 30 questions"
     android:textColor="@android:color/black"
     android:textSize="18sp"
     tools:ignore="MissingConstraints" />

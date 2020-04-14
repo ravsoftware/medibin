@@ -10,15 +10,15 @@ import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
 import android.view.DragEvent;
 import android.view.LayoutInflater;
@@ -238,7 +238,7 @@ public class BlueDustBin extends AppCompatActivity implements View.OnLongClickLi
             name.setText(data.get(countItems - 1).getName());
         }
 
-        System.out.println("        data siz     "+data.size());
+        System.out.println("        data size     "+data.size());
 
         onAddField(data);
 
@@ -308,7 +308,7 @@ public class BlueDustBin extends AppCompatActivity implements View.OnLongClickLi
                 data.add(new DataModel(
                         InfoData.nameArray[i],
                         InfoData.versionArray[i],
-                        InfoData.id_[i],
+                        i,
                         InfoData.drawableArray[i]
                 ));
             }
@@ -433,9 +433,9 @@ public class BlueDustBin extends AppCompatActivity implements View.OnLongClickLi
             wrong.setVisibility(View.VISIBLE);
             right.setVisibility(View.VISIBLE);
             time.setVisibility(View.VISIBLE);
-            right.setText(totalScore+" of "+items +" questians answered correctly");
+            right.setText(totalScore+" of "+items +" questions answered correctly");
             // right.setText("Right Answer : "+totalScore);
-            wrong.setText("Overall score : "+String.format("%.1f", res)+"%");
+            wrong.setText("Overall score : "+String.format("%.0f", res)+"%");
 
             long tim = circleTimeView.getCurrentTimeInSeconds();
             long as = 600-tim;

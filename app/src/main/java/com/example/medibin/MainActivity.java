@@ -3,8 +3,8 @@ package com.example.medibin;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
@@ -16,10 +16,12 @@ import android.widget.Toast;
 
 import com.example.medibin.about.AboutActivity;
 import com.example.medibin.bindata.BlueDustBinNew;
+import com.google.firebase.analytics.FirebaseAnalytics;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     ImageView about;
+    private FirebaseAnalytics mFirebaseAnalytics;
 
    // TextView out, in, operation, injection, labour, blood;
    // TextView out1, in1, operation1, injection1, labour1, blood1;
@@ -37,6 +39,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+
         socitreepreference = Preference.getInstance(this);
 
 
@@ -49,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         contentText= (TextView)findViewById(R.id.contenttext);
         about = (ImageView)findViewById(R.id.about);
 
-        String text ="<p><br>Medibin aids capacity building in medical profesionals, paramedics, Medical &amp; Paramedical students and also the waste handlers on Biomedical waste segregation.</p>";
+        String text ="<br>Medibin aids capacity building in medical professionals, paramedics, Medical &amp; Paramedical students and also the waste handlers on Biomedical waste segregation.<br>";
 
 
         contentText.setText(Html.fromHtml(text));

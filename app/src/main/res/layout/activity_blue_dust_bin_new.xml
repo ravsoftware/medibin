@@ -9,7 +9,7 @@
     android:orientation="vertical"
     android:id="@+id/linear_Layout"
     android:background="#775BC7FC">
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:background="#00BCD4"
         android:layout_margin="20dp"
         android:id="@+id/toolbar"
@@ -18,7 +18,7 @@
         app:titleTextColor="#fff">
 
 
-    </android.support.v7.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
 
 
@@ -162,7 +162,7 @@
         </RelativeLayout>
     </LinearLayout>
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycle"
         android:layout_below="@id/bottom"
         android:layout_width="match_parent"
